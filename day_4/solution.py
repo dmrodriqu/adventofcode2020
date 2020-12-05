@@ -14,3 +14,4 @@ for check in passports:
         invalid+=1
 
 print(invalid)
+f.close()
