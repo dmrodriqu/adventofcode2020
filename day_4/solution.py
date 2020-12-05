@@ -10,9 +10,7 @@ for check in passports:
     data = check.replace('\n', ' ')
     info = dict(item.split(':') for item in data.split())
     diff = categories - set(info.keys())
-    if bool(diff) and bool(diff - exceptions):
-        pass
-    else:
+    if not(bool(diff) and bool(diff - exceptions)):
         invalid+=1
 
 print(invalid)
